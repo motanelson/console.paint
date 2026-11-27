@@ -2,7 +2,7 @@
 using System.IO;
 class paint
 { 
-const int GRID = 32;
+const int GRID = 16;
 
 static byte[,] pixels = new byte[GRID, GRID];
 
@@ -140,7 +140,7 @@ static void DrawInterface()
     Console.Clear();
 
     Console.SetCursorPosition(0, 0);
-    Console.WriteLine("COSMOS 2 - VGA PIXEL PAINTER 32x32");
+    Console.WriteLine("VGA PIXEL PAINTER 32x32");
     Console.WriteLine();
 
     Console.WriteLine("Palette (0-F):");
@@ -186,7 +186,7 @@ static void DrawInterface()
         Console.ForegroundColor = ConsoleColor.Black;
     }
 
-    Console.SetCursorPosition(0, 38);
+    Console.SetCursorPosition(0, 18);
 
     Console.WriteLine("WASD: Move  SPACE: Paint  0-F: Color");
     Console.WriteLine("C: Clear  G: Save  L: Load  ESC: Exit");
@@ -210,7 +210,7 @@ static void DrawInterface()
     Console.BackgroundColor = ConsoleColor.White;
     Console.ForegroundColor = ConsoleColor.Black;
         Console.Clear();
-    //Console.SetCursorPosition(0, 42);
+    //Console.SetCursorPosition(0, 20);
     Console.Write("Filename: ");
 
     string name = Console.ReadLine();
@@ -238,7 +238,7 @@ static void DrawInterface()
             }
         }
 
-        //Console.SetCursorPosition(0, 43);
+        //Console.SetCursorPosition(0, 23);
         Console.WriteLine("Saved successfully.");
             return;
     }
@@ -254,7 +254,7 @@ static void LoadFile()
     Console.BackgroundColor = ConsoleColor.White;
     Console.ForegroundColor = ConsoleColor.Black;
 
-    Console.SetCursorPosition(0, 42);
+    Console.SetCursorPosition(0,23);
     Console.Write("Filename: ");
 
     string name = Console.ReadLine();
@@ -284,12 +284,12 @@ static void LoadFile()
             }
         }
 
-        Console.SetCursorPosition(0, 43);
+        Console.SetCursorPosition(0, 23);
         Console.WriteLine("Loaded successfully.");
     }
     catch
     {
-        Console.SetCursorPosition(0, 43);
+        Console.SetCursorPosition(0, 23);
         Console.WriteLine("Error loading file.");
     }
 }
